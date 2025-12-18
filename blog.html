@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Createfully Yours | Archita Agarwal</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="css/skel.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+  </head>
+  <body class="landing">
+    <header id="header" class="alt skel-layers-fixed">
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Createfully Yours</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="inner">
+        <p class="eyebrow">Creative journal</p>
+        <h1>Createfully Yours</h1>
+        <p>Stories of handmade celebrations, clever experiments, and the joyful details in between.</p>
+      </div>
+    </section>
+
+    <section class="blog-shell">
+      <div class="container blog-layout">
+        <aside class="blog-sidebar">
+          <h3>Posts</h3>
+          <ul class="blog-list" id="post-list"></ul>
+        </aside>
+        <article class="blog-content">
+          <div id="content-area">Loading post...</div>
+        </article>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <ul class="icons"></ul>
+    </footer>
+
+    <script>
+      const posts = [
+        { title: "Why I Started: Createfully Yours", file: "blog-posts/why-this-blog.md" },
+        { title: "Holi: A Celebration Close to My Heart", file: "blog-posts/holi-celebration.md" },
+        { title: "Three Balloons, Four Cakes, One Teary-Eyed Maa", file: "blog-posts/dubu-dadi-birthday.md" }
+      ];
+
+      const postList = document.getElementById("post-list");
+      const contentArea = document.getElementById("content-area");
+
+      function setActive(index) {
+        Array.from(postList.children).forEach((item, idx) => {
+          item.classList.toggle("active", idx === index);
+        });
+      }
+
+      function fetchMarkdown(path) {
+        const xhrFallback = () =>
+          new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", path, true);
+            xhr.onreadystatechange = () => {
+              if (xhr.readyState === 4) {
+                if (xhr.status === 200 || xhr.status === 0) {
+                  resolve(xhr.responseText);
+                } else {
+                  reject(new Error("XHR load error"));
+                }
+              }
+            };
+            xhr.onerror = reject;
+            xhr.send();
+          });
+
+        if (window.fetch) {
+          return fetch(path)
+            .then((response) => {
+              if (response.ok) return response.text();
+              throw new Error("Network error");
+            })
+            .catch(() => xhrFallback());
+        }
+
+        return xhrFallback();
+      }
+
+      function renderMarkdown(markdown) {
+        if (window.marked && typeof marked.parse === "function") {
+          return marked.parse(markdown);
+        }
+        const escapeHTML = (str) =>
+          str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+        return '<pre class="fallback-markdown">' + escapeHTML(markdown) + "</pre>";
+      }
+
+      function loadPost(index) {
+        const post = posts[index];
+        if (!post) return;
+        setActive(index);
+        contentArea.innerHTML = "<p>Loading...</p>";
+        fetchMarkdown(post.file)
+          .then((markdown) => {
+            contentArea.innerHTML = renderMarkdown(markdown);
+          })
+          .catch(() => {
+            contentArea.innerHTML =
+              "<p>Sorry, this post is taking longer than expected to load. Please try another entry.</p>";
+          });
+      }
+
+      function renderSidebar() {
+        posts.forEach((post, index) => {
+          const li = document.createElement("li");
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = post.title;
+          button.addEventListener("click", () => loadPost(index));
+          li.appendChild(button);
+          postList.appendChild(li);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderSidebar();
+        loadPost(0);
+      });
+    </script>
+  </body>
+</html>
