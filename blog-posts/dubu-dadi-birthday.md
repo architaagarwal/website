@@ -52,9 +52,16 @@ Our original plan was Sagar’s date-walnut cake. But on a whim, we decided to t
 
 And in a moment of cake-fueled excitement, we didn’t stop at one. We also ordered three adorable jar cakes in other flavors — each one cuter and yummier than the next. They added that perfect surprise wow element to the table.
 
-![Cake x 4 (Because Why Not?)](images/dubu-dadi-birthday/dubu-dadi-birthday-04.jpg)
-
-![Cake x 4 (Because Why Not?)](images/dubu-dadi-birthday/dubu-dadi-birthday-05.jpg)
+<div class="image-carousel" data-carousel>
+  <div class="carousel-track">
+    <img src="images/dubu-dadi-birthday/dubu-dadi-birthday-04.jpg" alt="Cake x 4 (Because Why Not?)" />
+    <img src="images/dubu-dadi-birthday/dubu-dadi-birthday-05.jpg" alt="Cake x 4 (Because Why Not?)" />
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-control prev" type="button">Prev</button>
+    <button class="carousel-control next" type="button">Next</button>
+  </div>
+</div>
 
 ## Gifts That Took Time, Not Space
 
@@ -80,9 +87,16 @@ That said, I’m not giving up on online books — because honestly, making a bo
 
 Right now, it’s off getting printed — but I already know she’s going to love it.
 
-![A Storybook in the Making](images/dubu-dadi-birthday/dubu-dadi-birthday-06.png)
-
-![A Storybook in the Making](images/dubu-dadi-birthday/dubu-dadi-birthday-07.png)
+<div class="image-carousel" data-carousel>
+  <div class="carousel-track">
+    <img src="images/dubu-dadi-birthday/dubu-dadi-birthday-06.png" alt="A Storybook in the Making" />
+    <img src="images/dubu-dadi-birthday/dubu-dadi-birthday-07.png" alt="A Storybook in the Making" />
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-control prev" type="button">Prev</button>
+    <button class="carousel-control next" type="button">Next</button>
+  </div>
+</div>
 
 ## Friends, Food, and One Last Surprise
 

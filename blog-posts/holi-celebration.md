@@ -16,21 +16,26 @@ Cold? Absolutely. But once soaked, the chill faded, and the game was on. Small k
 
 After three to four hours of non-stop mayhem, we’d finally surrender.
 
-![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-01.png)
-
 ![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-02.png)
 
-![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-03.jpg)
-
-![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-04.jpg)
-
-![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-05.jpg)
-
-![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-06.jpg)
+<div class="image-carousel" data-carousel>
+  <div class="carousel-track">
+    <img src="images/holi-celebration/holi-celebration-03.jpg" alt="Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun" />
+    <img src="images/holi-celebration/holi-celebration-04.jpg" alt="Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun" />
+    <img src="images/holi-celebration/holi-celebration-05.jpg" alt="Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun" />
+    <img src="images/holi-celebration/holi-celebration-06.jpg" alt="Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun" />
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-control prev" type="button">Prev</button>
+    <button class="carousel-control next" type="button">Next</button>
+  </div>
+</div>
 
 ## The Great Holi Cleanup: Ubtan, Lifebuoy, and the Battle for the Bathroom
 
 Next came the real challenge—scrubbing off the colors. Mom would prepare a huge bowl of ubtan, the only thing powerful enough (along with Lifebuoy) to remove the stubborn colors. We’d sit in a circle on the terrace, applying layer after layer until little mountains of peeled-off ubtan formed around us. What started as golden turmeric paste soon transformed into swirls of purple, green, and black.
+
+![Childhood Holi Memories: Mustard Oil, Pichkaris, and Lifebuoy Saabun](images/holi-celebration/holi-celebration-01.png)
 
 Then came the bathroom wars. With one bathroom and fifteen people, the queue was a battlefield of its own. The poor kids, of course, got the short end of the stick—handed a bucket and told to bathe on the terrace instead. 😆
 
