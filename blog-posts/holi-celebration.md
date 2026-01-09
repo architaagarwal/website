@@ -47,7 +47,7 @@ For me, Holi has always been about more than just colors—it's about celebratin
 
 We began the celebration by applying haldi and chandan to Chotu Krishanji and then putting the same as tikka on everyone — a little nod to the traditional Holi spirit, but in a gentler, more symbolic way.
 
-Let the Games Begin: Holi Quiz and Tambola Madness
+## Let the Games Begin: Holi Quiz and Tambola Madness
 
 What’s a festival without a little team competition? (Clearly, my childhood Holi team battles have influenced me deeply.)
 
